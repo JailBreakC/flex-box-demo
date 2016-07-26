@@ -6,6 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<h1>Flex 布局示例</h1>
+	<p>感谢阮一峰老师的教程<a target="_blank" href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+	<p>本示例将教程上所有的布局都简单的实现了一遍，并保存GitHub上面</p>
+	<p><a href="https://github.com/JailBreakC/flex-box-demo">https://github.com/JailBreakC/flex-box-demo</a></p>
+	<h2>容器的属性</h2>
 	<h3>1、flex-direction属性</h3>
 	<p>flex-direction属性决定主轴的方向（即项目的排列方向）。</p>
 	<p>
@@ -241,6 +246,85 @@
 		<div class="box-item">7</div>
 		<div class="box-item">8</div>
 		<div class="box-item">9</div>
+	</div>
+
+	<h2>项目的属性</h2>
+	<h3>1、order属性</h3>
+	<p>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+	<p>
+		.item {
+		  order: &lt;integer&gt;;
+		}
+	</p>
+	<div class="box box-22">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item order">4 <div>(order:-1)</div></div>
+	</div>
+
+	<h3>2、flex-grow属性</h3>
+	<p>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</p>
+	<p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+	<p>
+		.item {
+		  flex-grow: &lt;number&gt;; /* default 0 */
+		}
+	</p>
+	<div class="box box-23">
+		<div class="box-item grow">1 <div>flex-grow: 1</div></div>
+		<div class="box-item grow grow-2">2 <div>flex-grow: 2</div></div>
+		<div class="box-item grow">3 <div>flex-grow: 1</div></div>
+	</div>
+
+	<h3>3、flex-shrink</h3>
+	<p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+	<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。<br>负值对该属性无效。</p>
+	<p>
+		.item {
+		    flex-shrink: &lt;number&gt;; /* default 1 */
+		}
+	</p>
+	<div class="box box-24">
+		<div class="box-item shrink">1 <div>flex-shrink: 0</div></div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+	</div>
+
+	<h3>4、flex-basis属性</h3>
+	<p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
+	<p>
+		.item {
+		    flex-basis: &lt;length&gt;; | auto; /* default auto */
+		}
+	</p>
+	<div class="box box-25">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+	</div>
+
+	<h3>5、flex-basis属性</h3>
+	<p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</p>
+	<p>该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。</p>
+	<p>
+		.item {
+		    flex: none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt;? || &lt;'flex-basis'&gt; ]
+		}
+	</p>
+
+	<h3>6、align-self属性</h3>
+	<p>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
+	<p>
+		.item {
+		    align-self: auto | flex-start | flex-end | center | baseline | stretch;
+		}
+	</p>
+	<div class="box box-26">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item end">3<div>flex-end</div></div>
+		<div class="box-item">4</div>
 	</div>
 </body>
 </html>
