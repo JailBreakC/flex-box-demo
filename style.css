@@ -1,0 +1,95 @@
+body {
+	padding: 20px;
+	margin: 0;
+	background-color: #e1e1e1
+}
+
+.box {
+	background-color: white;
+	display: flex;
+	
+}
+
+.box-item {
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	vertical-align: middle;
+	margin: 5px;
+	background-color: #ffd200;
+	font-size: 100px;
+	color: white;
+	text-align: center;
+}
+.item-tall {
+	height: 400px;
+	line-height: 400px;
+}
+
+
+.box-1 {
+	flex-direction: row;
+}
+
+.box-2 {
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.box-3 {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.box-4 {
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+}
+
+.box-5 {
+	flex-flow: row nowrap;
+}
+
+.box-6 {
+	justify-content: flex-start;
+}
+.box-7 {
+	justify-content: flex-end;
+}
+.box-8 {
+	justify-content: center;
+}
+.box-9 {
+	justify-content: space-between;
+}
+.box-10 {
+	justify-content: space-around;
+}
+
+.box-11 {
+	align-items: flex-start;
+}
+.box-12 {
+	align-items: flex-end;
+}
+.box-13 {
+	align-items: center;
+}
+.box-14 {
+	align-items: baseline;
+}
+.box-14 .box-item{
+	font-size: 88px;
+	line-height: initial;
+	text-decoration: underline;
+}
+.box-14 .item-tall{
+	font-size: 122px;
+	line-height: initial;
+}
+.box-15 {
+	align-items: stretch;
+}
+.box-15 .box-item {
+	height: auto;
+}

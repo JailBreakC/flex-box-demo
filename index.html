@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex 布局示例</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h3>1、flex-direction属性</h3>
+	<p>flex-direction属性决定主轴的方向（即项目的排列方向）。</p>
+	<p>
+		.box {
+		    flex-direction: row | row-reverse | column | column-reverse;
+		}
+	</p>
+	<div class="box box-1">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+	</div>
+
+	<h3>2、flex-wrap属性</h3>
+	<p>默认情况下，项目都排在一条线（又称"轴线"）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。</p>
+	<p>
+		.box{
+		    flex-wrap: nowrap | wrap | wrap-reverse;
+		}
+	</p>
+	<p>（1）nowrap（默认）：不换行。</p>
+	<div class="box box-2">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
+	</div>
+	<p>（2）wrap：换行，第一行在上方。</p>
+	<div class="box box-3">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
+	</div>
+	<p>（3）wrap-reverse：换行，第一行在下方。</p>
+	<div class="box box-4">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
+	</div>
+
+	<h3>3、flex-flow</h3>
+	<p>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</p>
+	<p>
+		.box {
+		    flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;
+		}
+	</p>
+	<div class="box box-5">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
+	</div>
+
+	<h3>4、justify-content属性</h3>
+	<p>justify-content属性定义了项目在主轴上的对齐方式。</p>
+	<p>
+		.box {
+		    justify-content: flex-start | flex-end | center | space-between | space-around;
+		}
+	</p>
+	<p>flex-start</p>
+	<div class="box box-6">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+	</div>
+	<p>flex-end</p>
+	<div class="box box-7">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+	</div>
+	<p>center</p>
+	<div class="box box-8">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+	</div>
+	<p>space-between</p>
+	<div class="box box-9">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+	</div>
+	<p>space-around</p>
+	<div class="box box-10">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+	</div>
+
+	<h3>5、align-items属性</h3>
+	<p>align-items属性定义项目在交叉轴上如何对齐。</p>
+	<p>
+		.box {
+		 	align-items: flex-start | flex-end | center | baseline | stretch;
+		}
+
+	</p>
+	<p>flex-start：交叉轴的起点对齐。</p>
+	<div class="box box-11">
+		<div class="box-item">1</div>
+		<div class="box-item item-tall">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item item-tall">4</div>
+	</div>
+	<p>flex-end：交叉轴的终点对齐。</p>
+	<div class="box box-12">
+		<div class="box-item">1</div>
+		<div class="box-item item-tall">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item item-tall">4</div>
+	</div>
+	<p>center：交叉轴的中点对齐。</p>
+	<div class="box box-13">
+		<div class="box-item">1</div>
+		<div class="box-item item-tall">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item item-tall">4</div>
+	</div>
+	<p>baseline: 项目的第一行文字的基线对齐。</p>
+	<div class="box box-14 line">
+		<div class="box-item">1</div>
+		<div class="box-item item-tall">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item item-tall">4</div>
+	</div>
+	<p>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</p>
+	<div class="box box-15">
+		<div class="box-item">1</div>
+		<div class="box-item item-tall">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item item-tall">4</div>
+	</div>
+</body>
+</html>
