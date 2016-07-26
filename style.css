@@ -1,7 +1,8 @@
 body {
 	padding: 20px;
-	margin: 0;
-	background-color: #e1e1e1
+	margin: 0 auto;
+	background-color: #e1e1e1;
+	max-width: 1024px;
 }
 
 .box {
@@ -9,7 +10,9 @@ body {
 	display: flex;
 	
 }
-
+.box-tall {
+	height: 800px;
+}
 .box-item {
 	width: 200px;
 	height: 200px;
@@ -91,5 +94,33 @@ body {
 	align-items: stretch;
 }
 .box-15 .box-item {
+	height: auto;
+}
+
+.box-16 {
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+.box-17 {
+	flex-wrap: wrap;
+	align-content: flex-end;
+}
+.box-18 {
+	flex-wrap: wrap;
+	align-content: center;
+}
+.box-19 {
+	flex-wrap: wrap;
+	align-content: space-between
+}
+.box-20 {
+	flex-wrap: wrap;
+	align-content: space-around;
+}
+.box-21 {
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+.box-21 .box-item {
 	height: auto;
 }

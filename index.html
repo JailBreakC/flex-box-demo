@@ -27,7 +27,7 @@
 		    flex-wrap: nowrap | wrap | wrap-reverse;
 		}
 	</p>
-	<p>（1）nowrap（默认）：不换行。</p>
+	<p>nowrap（默认）：不换行。</p>
 	<div class="box box-2">
 		<div class="box-item">1</div>
 		<div class="box-item">2</div>
@@ -36,10 +36,8 @@
 		<div class="box-item">5</div>
 		<div class="box-item">6</div>
 		<div class="box-item">7</div>
-		<div class="box-item">8</div>
-		<div class="box-item">9</div>
 	</div>
-	<p>（2）wrap：换行，第一行在上方。</p>
+	<p>wrap：换行，第一行在上方。</p>
 	<div class="box box-3">
 		<div class="box-item">1</div>
 		<div class="box-item">2</div>
@@ -48,10 +46,8 @@
 		<div class="box-item">5</div>
 		<div class="box-item">6</div>
 		<div class="box-item">7</div>
-		<div class="box-item">8</div>
-		<div class="box-item">9</div>
 	</div>
-	<p>（3）wrap-reverse：换行，第一行在下方。</p>
+	<p>wrap-reverse：换行，第一行在下方。</p>
 	<div class="box box-4">
 		<div class="box-item">1</div>
 		<div class="box-item">2</div>
@@ -60,8 +56,6 @@
 		<div class="box-item">5</div>
 		<div class="box-item">6</div>
 		<div class="box-item">7</div>
-		<div class="box-item">8</div>
-		<div class="box-item">9</div>
 	</div>
 
 	<h3>3、flex-flow</h3>
@@ -79,8 +73,6 @@
 		<div class="box-item">5</div>
 		<div class="box-item">6</div>
 		<div class="box-item">7</div>
-		<div class="box-item">8</div>
-		<div class="box-item">9</div>
 	</div>
 
 	<h3>4、justify-content属性</h3>
@@ -90,35 +82,35 @@
 		    justify-content: flex-start | flex-end | center | space-between | space-around;
 		}
 	</p>
-	<p>flex-start</p>
+	<p>flex-start（默认值）：左对齐</p>
 	<div class="box box-6">
 		<div class="box-item">1</div>
 		<div class="box-item">2</div>
 		<div class="box-item">3</div>
 		<div class="box-item">4</div>
 	</div>
-	<p>flex-end</p>
+	<p>flex-end：右对齐</p>
 	<div class="box box-7">
 		<div class="box-item">1</div>
 		<div class="box-item">2</div>
 		<div class="box-item">3</div>
 		<div class="box-item">4</div>
 	</div>
-	<p>center</p>
+	<p>center： 居中</p>
 	<div class="box box-8">
 		<div class="box-item">1</div>
 		<div class="box-item">2</div>
 		<div class="box-item">3</div>
 		<div class="box-item">4</div>
 	</div>
-	<p>space-between</p>
+	<p>space-between：两端对齐，项目之间的间隔都相等。</p>
 	<div class="box box-9">
 		<div class="box-item">1</div>
 		<div class="box-item">2</div>
 		<div class="box-item">3</div>
 		<div class="box-item">4</div>
 	</div>
-	<p>space-around</p>
+	<p>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</p>
 	<div class="box box-10">
 		<div class="box-item">1</div>
 		<div class="box-item">2</div>
@@ -168,6 +160,87 @@
 		<div class="box-item item-tall">2</div>
 		<div class="box-item">3</div>
 		<div class="box-item item-tall">4</div>
+	</div>
+
+	<h3>6、align-content属性</h3>
+	<p>align-content属性定义了多根轴线（多行）的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+	<p>
+		.box {
+		  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+		}
+
+	</p>
+	<p>flex-start：交叉轴的起点对齐。</p>
+	<div class="box box-tall box-16">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
+	</div>
+	<p>flex-end：与交叉轴的终点对齐。</p>
+	<div class="box box-tall box-17">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
+	</div>
+	<p>center：与交叉轴的中点对齐。</p>
+	<div class="box box-tall box-18">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
+	</div>
+	<p>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</p>
+	<div class="box box-tall box-19">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
+	</div>
+	<p>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</p>
+	<div class="box box-tall box-20">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
+	</div>
+	<p>stretch（默认值）：轴线占满整个交叉轴。</p>
+	<div class="box box-tall box-21">
+		<div class="box-item">1</div>
+		<div class="box-item">2</div>
+		<div class="box-item">3</div>
+		<div class="box-item">4</div>
+		<div class="box-item">5</div>
+		<div class="box-item">6</div>
+		<div class="box-item">7</div>
+		<div class="box-item">8</div>
+		<div class="box-item">9</div>
 	</div>
 </body>
 </html>
