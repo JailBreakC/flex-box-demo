@@ -1,12 +1,33 @@
 body {
 	padding: 20px;
 	margin: 0 auto;
-	background-color: #e1e1e1;
+	background-color: #E2E2E2;
 	max-width: 1024px;
+	color: #595B66;
+	font-family: 'Microsoft Yahei', sans-serif;
 }
-
+h1,h2,h3,h4 {
+	color: #797979;
+    // border-bottom: solid 1px #797979;
+    padding: 5px 0;
+}
+h1, h2 {
+    border-bottom: solid 2px #797979;
+}
+p {
+	font-size: 15px;
+    background: #797979;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    line-height: 2;
+}
+a {
+	color: #FFD200;
+}
 .box {
 	background-color: white;
+	margin: 0 0 55px;
 	display: flex;
 	
 }

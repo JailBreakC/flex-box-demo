@@ -1,2 +1,5 @@
 # flex-box-demo
-flex-box布局教程，包含示例代码。
+
+点这里查看页面 <http://static.vgee.cn/static/index.html>
+
+![preview](http://static.vgee.cn/preview-nb.png)
