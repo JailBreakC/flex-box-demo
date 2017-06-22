@@ -1,5 +1,5 @@
-# flex-box-demo
+# flex-box-demo Flex 布局示例
 
-点这里查看页面 <http://static.vgee.cn/static/index.html>
+> 感谢阮一峰老师的教程 http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 
-![preview](http://static.vgee.cn/preview-nb.png)
+本示例将教程上所有的布局都简单的实现了一遍，预览地址：http://static.vgee.cn/static/index.html
